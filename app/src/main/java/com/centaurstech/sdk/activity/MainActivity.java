@@ -188,7 +188,6 @@ public class MainActivity extends BaseActivity implements MyAsrListener.VoiceLis
                 QiWuVoice.getTTS().stop();
                 QiWuPlayer.getInstance().stop();
                 MusicPlayManager.getInstance().pause();
-
                 Log.e("ma===onBefore", entity.isSuccess()+"====" +entity.getMsg()+"====" + entity.getMsgType()+"====" + entity.getPlayType());
 
                 mData.add(entity);
