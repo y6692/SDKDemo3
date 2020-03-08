@@ -188,6 +188,9 @@ public class MainActivity extends BaseActivity implements MyAsrListener.VoiceLis
                 QiWuVoice.getTTS().stop();
                 QiWuPlayer.getInstance().stop();
                 MusicPlayManager.getInstance().pause();
+
+                Log.e("ma===onBefore", entity.isSuccess()+"====" +entity.getMsg()+"====" + entity.getMsgType()+"====" + entity.getPlayType());
+
                 mData.add(entity);
                 mMainBinding.rvList.getAdapter().notifyDataSetChanged();
                 mMainBinding.mainBottomBar.getBtnListening().setState(ListeningButton.State.THINK);
@@ -204,6 +207,11 @@ public class MainActivity extends BaseActivity implements MyAsrListener.VoiceLis
                 mMainBinding.mainBottomBar.getBtnListening().setState(ListeningButton.State.IDLE);
                 LogUtils.sf("onSuccess : " + GsonUtils.toJson(entity));
                 QiWuVoice.getTTS().speech(entity.getMsg(), entity.getPlayType());
+
+                Log.e("ma===BotMessage0", GsonUtils.toJson(entity)+"====");
+
+                Log.e("ma===BotMessage", entity.isSuccess()+"====" +entity.getMsg()+"====" + entity.getMsgType()+"====" + entity.getPlayType());
+
                 MsgEntity msgEntity;
                 Map<String, Serializable> serializableMap;
                 if (entity.isSuccess()) {

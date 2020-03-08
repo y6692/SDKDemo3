@@ -15,6 +15,7 @@ import android.text.Editable;
 import android.text.Html;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -151,6 +152,9 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatViewHolder
     @Override
     public void onBindViewHolder(@NonNull ChatViewHolder viewHolder, int i) {
         MsgEntity msg = mData.get(i);
+
+        Log.e("ca===", msg.getMsgType()+"==="+msg.getMsg());
+
         switch (msg.getMsgType()) {
             case MsgType.TEXT_USER:
                 ItemRightBinding itemRightBinding = (ItemRightBinding) viewHolder.mViewBinding;
@@ -776,6 +780,9 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatViewHolder
                 break;
             case MsgType.TEXT_DEFAULT:
             default:
+
+                Log.e("ca===1", "==="+msg.getMsg());
+
                 ItemLeftBinding leftBinding = (ItemLeftBinding) viewHolder.mViewBinding;
                 setMsg(leftBinding.getRoot(), msg);
                 break;
