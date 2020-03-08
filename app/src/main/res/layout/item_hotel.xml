@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="@mipmap/index_dialog_yellow"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/sp_15" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cvTicket"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_160"
+            android:layout_marginTop="@dimen/dp_12"
+            app:cardCornerRadius="@dimen/dp_5">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvTimeAndCity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:text="5月25日 北京"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/sp_12" />
+
+                    <TextView
+                        android:id="@+id/tvHotelName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLength="20"
+                        android:maxLines="2"
+                        android:text="北京南锣鼓巷CitiGO酒店"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/sp_15" />
+
+                    <TextView
+                        android:id="@+id/tvStarBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_6"
+                        android:ellipsize="end"
+                        android:text="111"
+                        android:textColor="@color/colorFF9100"
+                        android:textSize="@dimen/sp_10" />
+
+                    <TextView
+                        android:id="@+id/tvDistrict"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_6"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="111"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/sp_10" />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tvStar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:textColor="@color/colorFFD400"
+                            android:textSize="@dimen/sp_9" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp_12">
+
+                    <TextView
+                        android:id="@+id/tvRoomType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp_4"
+                        android:layout_marginBottom="@dimen/dp_4"
+                        android:text=" "
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/sp_10" />
+
+
+                    <TextView
+                        android:id="@+id/tvMoneySign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp_4"
+                        android:layout_marginBottom="@dimen/dp_2"
+                        android:text="@string/hotel_money_sign"
+                        android:textColor="@color/colorFF9100"
+                        android:textSize="@dimen/sp_12" />
+
+
+                    <TextView
+                        android:id="@+id/tvPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="664"
+                        android:textColor="@color/colorFF9100"
+                        android:textSize="@dimen/sp_18" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <include
+            android:id="@+id/iFooter"
+            layout="@layout/layout_ai_chat_footer" />
+    </LinearLayout>
+</layout>

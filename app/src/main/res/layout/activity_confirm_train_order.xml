@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/iHeadLayout"
+            layout="@layout/layout_header" />
+
+        <View style="@style/line" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorF7F7F7">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="74dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorWhite"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <include
+                            android:id="@+id/iTicketInfo"
+                            layout="@layout/layout_train_ticket_info" />
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rvSeatType"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_90"
+                        android:layout_marginTop="@dimen/dp_12"
+                        android:background="@color/colorWhite">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:layout_marginTop="@dimen/dp_0.75"
+                        android:background="@color/colorWhite"
+                        android:paddingLeft="@dimen/dp_12"
+                        android:paddingRight="@dimen/dp_12">
+
+                        <TextView
+                            android:id="@+id/tvSeatType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="二等座"
+                            android:textColor="@color/color292929"
+                            android:textSize="@dimen/sp_15"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tvTicketPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dp_6"
+                            android:layout_toRightOf="@+id/tvSeatType"
+                            android:text="¥1530"
+                            android:textColor="@color/colorFF9100"
+                            android:textSize="@dimen/sp_15"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tvChildTicketRule"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/bg_radius_blue_d4_hollow"
+                            android:paddingLeft="@dimen/dp_8"
+                            android:paddingTop="@dimen/dp_4"
+                            android:paddingRight="@dimen/dp_8"
+                            android:paddingBottom="@dimen/dp_4"
+                            android:text="@string/refund_rule"
+                            android:textColor="@color/color007EFF"
+                            android:textSize="@dimen/sp_12" />
+
+                    </RelativeLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_44"
+                        android:layout_marginTop="@dimen/dp_12"
+                        android:background="@color/colorWhite"
+                        android:paddingLeft="@dimen/dp_12">
+
+                        <TextView
+                            android:id="@+id/tvTrainPassenger"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="@string/train_passenger"
+                            android:textColor="@color/color292929"
+                            android:textSize="@dimen/sp_15" />
+
+                        <ImageView
+                            android:id="@+id/ivAdd"
+                            android:layout_width="@dimen/dp_44"
+                            android:layout_height="@dimen/dp_44"
+                            android:layout_gravity="center_vertical|right"
+                            android:padding="@dimen/dp_10"
+                            android:src="@mipmap/btn_add_black" />
+
+                    </FrameLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rvPassengers"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </android.support.v7.widget.RecyclerView>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_12" />
+
+                    <include
+                        android:id="@+id/iContactName"
+                        layout="@layout/layout_tab_edit" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorWhite">
+
+                        <View
+                            style="@style/line"
+                            android:layout_marginLeft="@dimen/dp_12"
+                            android:layout_marginRight="@dimen/dp_12" />
+                    </FrameLayout>
+
+                    <include
+                        android:id="@+id/iContactPhone"
+                        layout="@layout/layout_tab_edit" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_12" />
+
+                    <LinearLayout
+                        android:id="@+id/llSelectedSeat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorWhite"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/dp_12">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:text="@string/selected_seat"
+                                android:textColor="@color/color2A2A2A"
+                                android:textSize="@dimen/sp_15"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvSeatNumber"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:textColor="@color/colorA9A9A9"
+                                android:textSize="@dimen/sp_15" />
+
+                        </RelativeLayout>
+
+                        <include
+                            android:id="@+id/ilSelectedSeat"
+                            layout="@layout/layout_selected_second_seat" />
+
+                        <TextView
+                            android:id="@+id/tvTrainTip"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_40"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:background="@color/colorFFF9DB"
+                            android:gravity="center|left"
+                            android:paddingLeft="@dimen/dp_12"
+                            android:text="@string/train_seat_warn"
+                            android:textColor="@color/colorFF9100"
+                            android:textSize="@dimen/sp_12" />
+
+                    </LinearLayout>
+
+                    <include
+                        android:id="@+id/iInsurance"
+                        layout="@layout/layout_tab_radio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_12"
+                        android:layout_marginBottom="@dimen/dp_12"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/click_submit_order_agree"
+                            android:textColor="@color/colorB3B3B3"
+                            android:textSize="@dimen/sp_12" />
+
+                        <TextView
+                            android:id="@+id/tvTrainServiceRule"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/train_service_rule"
+                            android:textColor="@color/colorFFD400"
+                            android:textSize="@dimen/sp_12" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </ScrollView>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:elevation="@dimen/dp_5">
+
+                <include
+                    android:id="@+id/iOrderFooter"
+                    layout="@layout/layout_confirm_order_footer" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/flPriceDetailBG"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dp_55"
+                android:background="@color/colorBlackT150"
+                android:clickable="true"
+                android:visibility="invisible">
+
+                <FrameLayout
+                    android:id="@+id/flPriceDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:clickable="true">
+
+                    <include
+                        android:id="@+id/iOrderPriceDetail"
+                        layout="@layout/layout_order_train_price_detail" />
+
+                </FrameLayout>
+
+            </FrameLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

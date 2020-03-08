@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_12">
+
+            <TextView
+                android:id="@+id/tvTravelerType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:text="@string/air_passenger"
+                android:textColor="@color/color666666"
+                android:textSize="@dimen/sp_15" />
+
+            <TextView
+                android:id="@+id/tvPassenger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTravelerType"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginRight="@dimen/dp_90"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="王二小 身份证：1011321990********"
+                android:textColor="@color/color292929"
+                android:textSize="@dimen/sp_15" />
+
+
+            <TextView
+                android:id="@+id/tvSeatNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvPassenger"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginRight="@dimen/dp_90"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="@color/color292929"
+                android:textSize="@dimen/sp_15"
+                android:visibility="gone" />
+
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:id="@+id/tvRefund"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/border_radius_gray_d5"
+                    android:paddingLeft="@dimen/dp_20"
+                    android:paddingTop="@dimen/dp_5"
+                    android:paddingRight="@dimen/dp_20"
+                    android:paddingBottom="@dimen/dp_5"
+                    android:text="@string/refund"
+                    android:textColor="@color/color292929"
+                    android:textSize="@dimen/sp_15" />
+
+                <TextView
+                    android:id="@+id/tvRefundState"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingTop="@dimen/dp_5"
+                    android:paddingBottom="@dimen/dp_5"
+                    android:text="@string/refunding"
+                    android:textColor="@color/colorFF9100"
+                    android:textSize="@dimen/sp_15"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+
+        </RelativeLayout>
+
+        <View
+            style="@style/line"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_marginRight="@dimen/dp_12" />
+
+    </LinearLayout>
+
+</layout>

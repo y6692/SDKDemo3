@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout
+        android:id="@+id/flContainer"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+       <android.support.v7.widget.CardView
+           android:id="@+id/cvContainer"
+           android:layout_margin="@dimen/dp_7"
+           app:cardElevation="@dimen/dp_0"
+           app:cardBackgroundColor="@color/colorFF9600"
+           app:cardCornerRadius="@dimen/dp_5"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+           <LinearLayout
+               android:orientation="vertical"
+               android:gravity="center"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+               <TextView
+                   android:id="@+id/tvSeatName"
+                   android:text="1111"
+                   android:textSize="@dimen/sp_15"
+                   android:layout_gravity="center"
+                   android:textColor="@color/colorWhite"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+               <TextView
+                   android:id="@+id/tvCount"
+                   android:text="1111"
+                   android:textSize="@dimen/sp_12"
+                   android:layout_gravity="center"
+                   android:textColor="@color/colorWhite"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+               <TextView
+                   android:id="@+id/tvPrice"
+                   android:text="$1111"
+                   android:textSize="@dimen/sp_15"
+                   android:layout_gravity="center"
+                   android:textColor="@color/colorWhite"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+           </LinearLayout>
+       </android.support.v7.widget.CardView>
+
+
+    </FrameLayout>
+
+</layout>

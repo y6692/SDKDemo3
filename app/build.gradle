@@ -1,0 +1,96 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "com.centaurstech.sdk"
+        minSdkVersion 16
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters "armeabi-v7a", "x86"//, "armeabi","arm64-v8a" , "x86_64"
+        }
+    }
+
+    signingConfigs {
+        key {
+            keyAlias '齐悟SDK'
+            keyPassword 'qiwu8888'
+            storeFile file('src/main/sdk.jks')
+            storePassword 'qiwu8888'
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            multiDexEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.key
+        }
+        debug {
+            minifyEnabled true
+            multiDexEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.key
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    dataBinding {
+        enabled true
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+}
+
+ext.supportLibVersion = '28.+'
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "com.android.support:appcompat-v7:${supportLibVersion}"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.qw:soulpermission:1.1.7'
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    implementation "com.android.support:cardview-v7:${supportLibVersion}"
+    implementation "com.android.support:design:${supportLibVersion}"
+    implementation 'com.google.code.gson:gson:+'
+    implementation 'com.orhanobut:logger:1.+'
+    implementation 'com.android.support:multidex:1.0.1'
+    implementation 'com.squareup.okhttp3:okhttp:3.12.0'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'jp.wasabeef:glide-transformations:2.0.2'
+    implementation 'cn.carbswang.android:NumberPickerView:1.1.1'
+    implementation files('lib/alipaySdk-20180601.jar')
+    implementation 'com.google.zxing:core:3.3.0'
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    implementation project(':qiwuUI')
+//    implementation project(':qiwu')
+//    implementation project(':voice')
+
+    implementation files('lib/qiwu_20200120.jar')
+    implementation files('lib/qiwu_voice_20200120.jar')
+    implementation files('lib/qiwu_audio_asr.jar')
+    implementation files('lib/com.baidu.tts_2.3.2.20180713_6101c2a.jar')
+    implementation files('lib/AMap3DMap_6.9.4_AMapSearch_6.9.2_AMapLocation_4.7.0_20190831.jar')
+//    implementation files('lib/AMap3DMap_6.8.0_AMapNavi_6.7.0_AMapSearch_6.5.0_AMapLocation_4.6.0_20190423.jar')
+
+}

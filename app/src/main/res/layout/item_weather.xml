@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dp_20">
+
+            <TextView
+                android:id="@+id/tvText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:background="@mipmap/index_dialog_yellow"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/sp_15" />
+
+            <com.qiwu.ui.view.RecyclerViewPager
+                android:id="@+id/rvWeathers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_12"
+                android:clipToPadding="false"
+                android:paddingLeft="@dimen/dp_18"
+                android:paddingRight="@dimen/dp_18"
+                app:rvp_singlePageFling="true"
+                app:rvp_triggerOffset="0.1" />
+
+            <TextView
+                android:id="@+id/tvAnother"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_36"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="@dimen/dp_12"
+                android:gravity="center_vertical"
+                android:text="查看未来7天天气"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/sp_15" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

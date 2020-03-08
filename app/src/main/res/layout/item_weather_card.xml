@@ -1,0 +1,118 @@
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/dp_6"
+            android:layout_marginRight="@dimen/dp_6"
+            app:cardCornerRadius="@dimen/dp_5"
+            app:cardElevation="@dimen/dp_10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cvWeatherBG"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="@dimen/dp_5"
+                        app:cardElevation="@dimen/dp_0">
+
+                        <TextView
+                            android:id="@+id/ivWeatherBG"
+                            android:layout_width="match_parent"
+                            android:layout_height="146dp"
+                            android:background="@color/colorWhite" />
+
+                    </android.support.v7.widget.CardView>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/cvWeatherBG"
+                        android:layout_alignTop="@+id/cvWeatherBG"
+                        android:layout_alignRight="@+id/cvWeatherBG"
+                        android:layout_alignBottom="@+id/cvWeatherBG">
+
+                        <TextView
+                            android:id="@+id/tvDateAndLocation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_15"
+                            android:layout_marginTop="@dimen/dp_15"
+                            android:text="2018.05.25  |  北京"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/sp_12" />
+
+                        <TextView
+                            android:id="@+id/tvCentigrade"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/rvEnvironment"
+                            android:layout_alignLeft="@+id/rvEnvironment"
+                            android:layout_marginTop="@dimen/dp_21"
+                            android:text="23°/27°"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/sp_30" />
+
+
+                        <TextView
+                            android:id="@+id/tvWeather"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvCentigrade"
+                            android:layout_alignLeft="@+id/tvCentigrade"
+                            android:text="多云"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/sp_15" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rvEnvironment"
+                            android:layout_width="@dimen/dp_110"
+                            android:layout_height="@dimen/dp_40"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="@dimen/dp_16"
+                            android:layout_marginBottom="@dimen/dp_20">
+
+                        </android.support.v7.widget.RecyclerView>
+
+
+                        <ImageView
+                            android:id="@+id/ivWeather"
+                            android:layout_width="@dimen/dp_90"
+                            android:layout_height="@dimen/dp_90"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="@dimen/dp_30"
+                            android:layout_marginRight="@dimen/dp_20" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvWeathers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/dp_20" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+</layout>

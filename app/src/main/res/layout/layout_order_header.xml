@@ -1,0 +1,466 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:id="@+id/rlContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite">
+
+        <LinearLayout
+            android:id="@+id/llDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_12">
+
+            <RelativeLayout
+                android:id="@+id/rlOrderInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tvOrderUseState"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/colorFF9100"
+                    android:textSize="@dimen/sp_15" />
+
+                <TextView
+                    android:id="@+id/tvOrderPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/tvOrderUseState"
+                    android:layout_alignParentRight="true"
+                    android:text="￥----"
+                    android:textColor="@color/colorFF9100"
+                    android:textSize="@dimen/sp_15" />
+
+                <TextView
+                    android:id="@+id/tvOrderUseHint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvOrderUseState"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:text=""
+                    android:textColor="@color/color666666"
+                    android:textSize="@dimen/sp_12" />
+
+                <TextView
+                    android:id="@+id/tvPriceDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvOrderUseState"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:text="@string/price_detail"
+                    android:textColor="@color/color666666"
+                    android:textSize="@dimen/sp_12" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/ivPop"
+                android:layout_width="@dimen/dp_13"
+                android:layout_height="@dimen/dp_22"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:src="@mipmap/btn_pop"
+                android:visibility="gone" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llStateContainer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_32"
+            android:layout_below="@+id/llDetail"
+            android:layout_marginBottom="@dimen/dp_12"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_12"
+            android:paddingRight="@dimen/dp_12">
+
+            <LinearLayout
+                android:id="@+id/llUnpaid"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_32"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="@dimen/dp_5"
+                    app:cardElevation="@dimen/dp_0">
+
+                    <TextView
+                        android:id="@+id/tvCancelOrder"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/border_radius_gray_d5"
+                        android:gravity="center"
+                        android:text="@string/cancel_order"
+                        android:textSize="@dimen/sp_15" />
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvToPay1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_32"
+                    android:layout_marginLeft="@dimen/sp_28"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/colorYellow"
+                    app:cardCornerRadius="@dimen/dp_5"
+                    app:cardElevation="@dimen/dp_0">
+
+                    <TextView
+                        android:id="@+id/tvToPay1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:text="@string/to_pay"
+                        android:textColor="@color/color292929"
+                        android:textSize="@dimen/sp_15" />
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llRefunding"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_32"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="@dimen/dp_5"
+                    app:cardElevation="@dimen/dp_0">
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/sp_28"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="@dimen/dp_5"
+                    app:cardElevation="@dimen/dp_0">
+
+                    <TextView
+                        android:id="@+id/tvRefunding"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/border_radius_gray_d5"
+                        android:gravity="center"
+                        android:text="@string/refund"
+                        android:textColor="@color/color292929"
+                        android:textSize="@dimen/sp_15" />
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llRefund"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_32"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="@dimen/dp_5"
+                    app:cardElevation="@dimen/dp_0">
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/sp_28"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="@dimen/dp_5"
+                    app:cardElevation="@dimen/dp_0">
+
+                    <TextView
+                        android:id="@+id/tvRefundDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/border_radius_gray_d5"
+                        android:gravity="center"
+                        android:text="@string/refund_detail"
+                        android:textColor="@color/color292929"
+                        android:textSize="@dimen/sp_15" />
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llTravel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvShareRoute"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_32"
+                    android:layout_weight="1"
+                    android:visibility="invisible"
+                    app:cardBackgroundColor="@color/colorYellow"
+                    app:cardCornerRadius="@dimen/dp_5"
+                    app:cardElevation="@dimen/dp_0">
+
+                    <TextView
+                        android:id="@+id/tvShareRoute"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:text="@string/share_route"
+                        android:textColor="@color/color292929"
+                        android:textSize="@dimen/sp_15" />
+                </android.support.v7.widget.CardView>
+
+
+                <LinearLayout
+                    android:id="@+id/flDelete3"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/sp_28"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="@dimen/dp_5"
+                        app:cardElevation="@dimen/dp_0">
+
+                        <TextView
+                            android:id="@+id/tvDelete3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:background="@drawable/border_radius_gray_d5"
+                            android:gravity="center"
+                            android:text="@string/delete_order"
+                            android:textColor="@color/color292929"
+                            android:textSize="@dimen/sp_15" />
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llDelete"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_32"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="@dimen/dp_5"
+                    app:cardElevation="@dimen/dp_0">
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/sp_28"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="@dimen/dp_5"
+                    app:cardElevation="@dimen/dp_0">
+
+                    <TextView
+                        android:id="@+id/tvDelete"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/border_radius_gray_d5"
+                        android:gravity="center"
+                        android:text="@string/delete_order"
+                        android:textColor="@color/color292929"
+                        android:textSize="@dimen/sp_15" />
+                </android.support.v7.widget.CardView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llAgainBook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvAgainDelete"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/sp_28"
+                    android:layout_weight="1"
+                    android:visibility="invisible"
+                    app:cardCornerRadius="@dimen/dp_5"
+                    app:cardElevation="@dimen/dp_0">
+
+                    <TextView
+                        android:id="@+id/tvDelete2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/border_radius_gray_d5"
+                        android:gravity="center"
+                        android:text="@string/delete_order"
+                        android:textColor="@color/color292929"
+                        android:textSize="@dimen/sp_15" />
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvAgainBook"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_32"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="@dimen/dp_5"
+                    app:cardElevation="@dimen/dp_0">
+
+                    <TextView
+                        android:id="@+id/tvAgainBook"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/border_radius_gray_d5"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:text="@string/cancel_reserve"
+                        android:textColor="@color/color292929"
+                        android:textSize="@dimen/sp_15" />
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llNoTravel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_32"
+                    android:layout_weight="1"
+                    android:visibility="invisible"
+                    app:cardBackgroundColor="@color/colorYellow"
+                    app:cardCornerRadius="@dimen/dp_5"
+                    app:cardElevation="@dimen/dp_0">
+
+                    <TextView
+                        android:id="@+id/tvShareRoute2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:text="@string/share_route"
+                        android:textColor="@color/color292929"
+                        android:textSize="@dimen/sp_15" />
+                </android.support.v7.widget.CardView>
+
+                <LinearLayout
+                    android:id="@+id/flPrepaid"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/sp_28"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="@dimen/dp_5"
+                        app:cardElevation="@dimen/dp_0">
+
+                        <TextView
+                            android:id="@+id/tvTicketChanging"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:background="@drawable/border_radius_gray_d5"
+                            android:gravity="center"
+                            android:text="@string/ticket_changing"
+                            android:textColor="@color/color292929"
+                            android:textSize="@dimen/sp_15" />
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="@dimen/dp_5"
+                        app:cardElevation="@dimen/dp_0">
+
+                        <TextView
+                            android:id="@+id/tvRefund"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:background="@drawable/border_radius_gray_d5"
+                            android:gravity="center"
+                            android:text="@string/refund"
+                            android:textColor="@color/color292929"
+                            android:textSize="@dimen/sp_15" />
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvToPay"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_32"
+                android:layout_marginLeft="@dimen/sp_28"
+                android:layout_weight="1"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/colorYellow"
+                app:cardCornerRadius="@dimen/dp_5"
+                app:cardElevation="@dimen/dp_0">
+
+                <TextView
+                    android:id="@+id/tvToPay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="@string/to_pay"
+                    android:textSize="@dimen/sp_15" />
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</layout>

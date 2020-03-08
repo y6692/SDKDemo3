@@ -1,0 +1,33 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <FrameLayout
+            android:id="@+id/llContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_30"
+            android:gravity="center_vertical">
+
+            <View
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tvAnother"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_36"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="@dimen/dp_12"
+                android:gravity="center_vertical"
+                android:text="@string/look_more"
+                android:textColor="@color/colorB3B3B3"
+                android:textSize="@dimen/sp_15" />
+
+        </FrameLayout>
+    </FrameLayout>
+</layout>

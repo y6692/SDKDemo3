@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/iHeadLayout"
+            layout="@layout/layout_header" />
+
+        <View style="@style/line" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorF7F7F7">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/iOrderHeader"
+                    layout="@layout/layout_order_header" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:background="@color/colorWhite"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvOrderId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_12"
+                        android:layout_marginTop="@dimen/dp_12"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:text="订单号："
+                        android:textColor="@color/color2A2A2A"
+                        android:textSize="@dimen/sp_12" />
+
+
+                    <TextView
+                        android:id="@+id/tvPlaceOrderTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_12"
+                        android:layout_marginTop="@dimen/dp_2"
+                        android:text="下单时间："
+                        android:textColor="@color/color2A2A2A"
+                        android:textSize="@dimen/sp_12" />
+
+                    <View
+                        style="@style/line"
+                        android:layout_marginTop="@dimen/dp_12"
+                        android:layout_marginBottom="@dimen/dp_12" />
+
+
+                    <LinearLayout
+                        android:id="@+id/llTicketInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+
+                    <View style="@style/line" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tvLookRefundRule"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="@dimen/dp_12"
+                            android:paddingTop="@dimen/dp_12"
+                            android:paddingBottom="@dimen/dp_12"
+                            android:text="@string/look_refund_rule"
+                            android:textColor="@color/color007EFF"
+                            android:textSize="@dimen/sp_12"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tvMakeInvoice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="@dimen/dp_12"
+                            android:paddingTop="@dimen/dp_12"
+                            android:paddingRight="@dimen/dp_12"
+                            android:paddingBottom="@dimen/dp_12"
+                            android:text="@string/make_invoice"
+                            android:textColor="@color/color007EFF"
+                            android:textSize="@dimen/sp_12"
+                            android:visibility="gone" />
+
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rvPassengers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_12">
+
+                    </android.support.v7.widget.RecyclerView>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_70"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:background="@color/colorWhite"
+                    android:paddingLeft="@dimen/dp_12"
+                    android:paddingRight="@dimen/dp_12">
+
+                    <TextView
+                        android:id="@+id/tvContact"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="@dimen/dp_12"
+                        android:text="@string/contact"
+                        android:textColor="@color/color666666"
+                        android:textSize="@dimen/sp_15" />
+
+                    <TextView
+                        android:id="@+id/tvContactNameAndPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="@dimen/dp_12"
+                        android:layout_marginBottom="@dimen/dp_12"
+                        android:textColor="@color/color292929"
+                        android:textSize="@dimen/sp_15" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/colorTransparent"
+        app:cardCornerRadius="@dimen/dp_0"
+        app:cardElevation="@dimen/dp_0">
+
+        <LinearLayout
+            android:id="@+id/superContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/contentContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/horizontalHalvingLine"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0.75"
+                android:background="@color/colorLine" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorLine"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/leftBtnLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/colorWhite">
+
+                    <Button
+                        android:id="@+id/btnCancel"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_45"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:text="@string/cancel"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/sp_14" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="@dimen/dp_0.75"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorWhite">
+
+                    <View
+                        android:id="@+id/verticalHalvingLine"
+                        android:layout_width="@dimen/dp_0.75"
+                        android:layout_height="@dimen/dp_30"
+                        android:layout_gravity="center"
+                        android:background="@color/colorLine" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/rightBtnLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorWhite">
+
+                    <Button
+                        android:id="@+id/btnDetermine"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_45"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:text="@string/confirm"
+                        android:textColor="@color/colorFFD400"
+                        android:textSize="@dimen/sp_14" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</FrameLayout>

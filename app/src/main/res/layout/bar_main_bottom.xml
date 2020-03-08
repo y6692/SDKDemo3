@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/dp_56">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_56"
+            android:background="@color/colorTheme"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/itemKeyboard"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="invisible">
+
+                <ImageView
+                    android:id="@+id/ivKeyboard"
+                    android:layout_width="@dimen/dp_21"
+                    android:layout_height="@dimen/dp_21"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/toolbar_icon_keyboard" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/itemCommunication"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+            </FrameLayout>
+
+
+            <LinearLayout
+                android:id="@+id/itemUser"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="invisible">
+
+                <ImageView
+                    android:id="@+id/ivPersonageCenter"
+                    android:layout_width="@dimen/dp_21"
+                    android:layout_height="@dimen/dp_21"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/toolbar_icon_peo" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llEditContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@color/colorTheme"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/dp_66"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/ivVoice"
+                android:layout_width="@dimen/dp_56"
+                android:layout_height="@dimen/dp_56"
+                android:clickable="true"
+                android:padding="@dimen/dp_18"
+                android:src="@mipmap/ic_visual" />
+
+            <LinearLayout
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:minHeight="@dimen/dp_56"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etMsg"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:layout_marginBottom="@dimen/dp_12"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_radius_white_d4"
+                    android:gravity="center_vertical"
+                    android:hint="@string/please_input"
+                    android:imeOptions="actionSend"
+                    android:maxLength="100"
+                    android:maxLines="3"
+                    android:minHeight="@dimen/dp_32"
+                    android:paddingLeft="@dimen/dp_8"
+                    android:paddingTop="@dimen/dp_5"
+                    android:paddingRight="@dimen/dp_8"
+                    android:paddingBottom="@dimen/dp_5"
+                    android:singleLine="true"
+                    android:textSize="@dimen/sp_15" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ivSend"
+                android:layout_width="@dimen/dp_56"
+                android:layout_height="@dimen/dp_56"
+                android:clickable="true"
+                android:padding="@dimen/dp_18"
+                android:src="@mipmap/send" />
+
+        </LinearLayout>
+
+        <com.centaurstech.sdk.view.ListeningButton
+            android:id="@+id/btnListening"
+            android:layout_width="@dimen/dp_130"
+            android:layout_height="@dimen/dp_56"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/colorTheme"
+            android:clickable="true" />
+
+    </FrameLayout>
+
+</layout>

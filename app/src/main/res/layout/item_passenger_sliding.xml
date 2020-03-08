@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <View
+            style="@style/line"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_marginRight="@dimen/dp_12" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60">
+
+            <RelativeLayout
+                android:id="@+id/rlInfoView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/dp_12"
+                android:paddingRight="@dimen/dp_12"
+                android:paddingBottom="@dimen/dp_12">
+
+                <ImageView
+                    android:id="@+id/ivDelete"
+                    android:layout_width="@dimen/dp_46"
+                    android:layout_height="@dimen/dp_46"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/dp_6"
+                    android:src="@mipmap/btn_del" />
+
+                <TextView
+                    android:id="@+id/textAirPassenger"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvAirPassenger"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:layout_toRightOf="@id/ivDelete"
+                    android:textColor="@color/color292929"
+                    android:textSize="@dimen/sp_15" />
+
+                <TextView
+                    android:id="@+id/tvAirPassenger"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:layout_toRightOf="@id/ivDelete"
+                    android:textColor="@color/color292929"
+                    android:textSize="@dimen/sp_12" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</layout>

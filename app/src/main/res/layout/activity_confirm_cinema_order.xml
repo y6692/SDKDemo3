@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/navContainer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_44"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorWhite">
+
+            <ImageView
+                android:id="@+id/btnNavBack"
+                android:layout_width="@dimen/dp_44"
+                android:layout_height="@dimen/dp_44"
+                android:layout_alignParentLeft="true"
+                android:paddingLeft="@dimen/dp_9"
+                android:paddingTop="@dimen/dp_12"
+                android:paddingRight="@dimen/dp_12"
+                android:paddingBottom="@dimen/dp_12"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/nav_btn_back" />
+
+
+            <TextView
+                android:id="@+id/tvNavTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/color292929"
+                android:textSize="@dimen/sp_18"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_above="@+id/rlBottomLayout"
+            android:layout_below="@+id/navContainer"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorF7F7F7"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_200"
+                    android:background="@color/color2A2A2A">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/dp_20"
+                        android:layout_marginRight="@dimen/dp_20"
+                        android:background="@mipmap/dyp_moviecard"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/dp_30"
+                        android:paddingTop="@dimen/dp_12"
+                        android:paddingRight="@dimen/dp_30"
+                        android:paddingBottom="@dimen/dp_12">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tvMovieName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:textColor="@color/color2A2A2A"
+                                android:textSize="@dimen/sp_18"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvMovieTicket"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/dp_10"
+                                android:layout_toRightOf="@+id/tvMovieName"
+                                android:textColor="@color/color9B9B9B"
+                                android:textSize="@dimen/sp_13" />
+
+                            <TextView
+                                android:id="@+id/tvMovieTimer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/dp_10"
+                                android:drawableLeft="@mipmap/shansong_icon_time"
+                                android:drawablePadding="@dimen/dp_10"
+                                android:textColor="@color/color9B9B9B"
+                                android:textSize="@dimen/sp_13" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tvMoviePlayType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_12"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textColor="@color/colorF68709"
+                            android:textSize="@dimen/sp_13" />
+
+                        <TextView
+                            android:id="@+id/tvMovieAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_6"
+                            android:textColor="@color/color2A2A2A"
+                            android:textSize="@dimen/sp_13" />
+
+                        <TextView
+                            android:id="@+id/tvMoviePlace"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_6"
+                            android:textColor="@color/color2A2A2A"
+                            android:textSize="@dimen/sp_13" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <include
+                    android:id="@+id/iCoupon"
+                    layout="@layout/layout_tab_text"
+                    android:visibility="gone" />
+
+                <View style="@style/line" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_44"
+                    android:background="@color/colorWhite">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dp_12"
+                        android:text="票价总计"
+                        android:textColor="@color/color2A2A2A"
+                        android:textSize="@dimen/sp_15" />
+
+                    <TextView
+                        android:id="@+id/tvPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp_12"
+                        android:textColor="@color/colorF68709"
+                        android:textSize="@dimen/sp_15" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_44"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:background="@color/colorWhite">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dp_12"
+                        android:text="@string/phone_number"
+                        android:textColor="@color/color2A2A2A"
+                        android:textSize="@dimen/sp_15" />
+
+                    <TextView
+                        android:id="@+id/tvPhoneNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp_12"
+                        android:textColor="@color/color2A2A2A"
+                        android:textSize="@dimen/sp_15" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_6"
+                    android:paddingLeft="@dimen/dp_12"
+                    android:text="手机号将用于接收票务相关信息"
+                    android:textColor="@color/color9B9B9B"
+                    android:textSize="@dimen/sp_10" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:background="@color/colorWhite"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/dp_12">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dp_12"
+                        android:text="购票须知"
+                        android:textColor="@color/color2A2A2A"
+                        android:textSize="@dimen/sp_15"
+                        android:textStyle="bold" />
+
+                    <View
+                        style="@style/line"
+                        android:layout_marginLeft="@dimen/dp_12"
+                        android:layout_marginTop="@dimen/dp_12" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_12"
+                        android:paddingLeft="@dimen/dp_12"
+                        android:paddingRight="@dimen/dp_12"
+                        android:text="1、请确认场次和时间无误，购买成功后，不支持退票、换票"
+                        android:textColor="@color/color9B9B9B"
+                        android:textSize="@dimen/sp_12" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_12"
+                        android:paddingLeft="@dimen/dp_12"
+                        android:paddingRight="@dimen/dp_12"
+                        android:text="2、由于影院系统或设备故障等因素，可能存在出票失败或部分场次临时取消的情况，如此类情况发生，将自动为您退款"
+                        android:textColor="@color/color9B9B9B"
+                        android:textSize="@dimen/sp_12" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_12"
+                        android:paddingLeft="@dimen/dp_12"
+                        android:paddingRight="@dimen/dp_12"
+                        android:text="3、购票成功后，您将收到取票码短信"
+                        android:textColor="@color/color9B9B9B"
+                        android:textSize="@dimen/sp_12" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_12"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/dp_12"
+                        android:paddingRight="@dimen/dp_12">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4、下单即代表您同意"
+                            android:textColor="@color/color9B9B9B"
+                            android:textSize="@dimen/sp_12" />
+
+                        <TextView
+                            android:id="@+id/tvMovieAgreement"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|center_vertical"
+                            android:clickable="true"
+                            android:text="@string/movie_agreement"
+                            android:textColor="@color/color2A2A2A"
+                            android:textSize="@dimen/sp_12" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+        <RelativeLayout
+            android:id="@+id/rlBottomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="@dimen/dp_12">
+
+            <LinearLayout
+                android:id="@+id/llLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="应付:"
+                    android:textColor="@color/color2A2A2A"
+                    android:textSize="@dimen/sp_18" />
+
+                <TextView
+                    android:id="@+id/tvPayPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:textColor="@color/colorF68709"
+                    android:textSize="@dimen/sp_20" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llLeft"
+                android:layout_marginTop="@dimen/dp_5"
+                android:text="暂不支持退改签"
+                android:textColor="@color/color9B9B9B"
+                android:textSize="@dimen/sp_15" />
+
+            <TextView
+                android:id="@+id/tvConfirmSeat"
+                android:layout_width="@dimen/dp_130"
+                android:layout_height="@dimen/dp_45"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_radius_d20_yellow"
+                android:gravity="center"
+                android:text="立即付款"
+                android:textColor="@color/color2A2A2A"
+                android:textSize="@dimen/sp_18"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

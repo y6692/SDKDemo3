@@ -1,0 +1,108 @@
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_weight="4"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="@string/birth_date"
+                    android:textColor="@color/color2A2A2A"
+                    android:textSize="@dimen/sp_15"
+                    android:paddingRight="@dimen/dp_20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:id="@+id/llBirthDay"
+                    android:clickable="true"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvBirthday"
+                        android:textColor="@color/color2A2A2A"
+                        android:textSize="@dimen/sp_15"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <ImageView
+                        android:src="@mipmap/anv_btn_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="3"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content">
+                <View
+                    android:layout_weight="1"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_1"/>
+
+                <TextView
+                    android:text="@string/gender"
+                    android:textColor="@color/color2A2A2A"
+                    android:textSize="@dimen/sp_15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <ImageView
+                    android:id="@+id/ivGenderMan"
+                    android:layout_marginLeft="@dimen/dp_8"
+                    android:layout_marginRight="@dimen/dp_4"
+                    android:src="@mipmap/btn_profile_selected"
+                    android:padding="@dimen/dp_4"
+                    android:layout_width="@dimen/dp_24"
+                    android:layout_height="@dimen/dp_24"/>
+
+                <TextView
+                    android:text="@string/man"
+                    android:textColor="@color/color2A2A2A"
+                    android:textSize="@dimen/sp_15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <ImageView
+                    android:id="@+id/ivGenderWoman"
+                    android:layout_marginLeft="@dimen/dp_8"
+                    android:layout_marginRight="@dimen/dp_4"
+                    android:src="@mipmap/btn_profile_selected"
+                    android:padding="@dimen/dp_4"
+                    android:layout_width="@dimen/dp_24"
+                    android:layout_height="@dimen/dp_24"/>
+
+                <TextView
+                    android:text="@string/woman"
+                    android:textColor="@color/color2A2A2A"
+                    android:textSize="@dimen/sp_15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

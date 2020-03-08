@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/iHeadLayout"
+            layout="@layout/layout_header" />
+
+        <View style="@style/line" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorF7F7F7"
+                android:focusableInTouchMode="true">
+
+                <LinearLayout
+                    android:id="@+id/llLayoutRoot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="72dp">
+
+
+                    <include
+                        android:id="@+id/iFlightTicketInfoTab2"
+                        layout="@layout/item_flight_ticket_info_tab"
+                        android:visibility="gone" />
+
+                    <View
+                        android:id="@+id/vLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_12"
+                        android:visibility="gone" />
+
+                    <include
+                        android:id="@+id/iFlightTicketInfoTab1"
+                        layout="@layout/item_flight_ticket_info_tab" />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_12"
+                        android:background="@color/colorWhite"
+                        android:padding="@dimen/dp_12">
+
+                        <TextView
+                            android:id="@+id/tvTicketType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/adult_ticket"
+                            android:textColor="@color/color292929"
+                            android:textSize="@dimen/sp_15" />
+
+                        <TextView
+                            android:id="@+id/tvTicketPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_6"
+                            android:layout_toRightOf="@+id/tvTicketType"
+                            android:textColor="@color/colorFF9100"
+                            android:textSize="@dimen/sp_15" />
+
+                        <TextView
+                            android:id="@+id/tvFuelOid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvTicketType"
+                            android:text="@string/fuel_oil"
+                            android:textColor="@color/color292929"
+                            android:textSize="@dimen/sp_12" />
+
+                        <TextView
+                            android:id="@+id/tvFuelOidPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/tvFuelOid"
+                            android:layout_marginLeft="@dimen/dp_6"
+                            android:layout_toRightOf="@+id/tvFuelOid"
+                            android:textColor="@color/colorFF9100"
+                            android:textSize="@dimen/sp_12" />
+
+
+                        <TextView
+                            android:id="@+id/tvChildTicketRule"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/bg_radius_blue_d4_hollow"
+                            android:padding="@dimen/dp_4"
+                            android:text="@string/child_ticket_rule"
+                            android:textColor="@color/color007EFF"
+                            android:textSize="@dimen/sp_12"
+                            android:visibility="gone" />
+
+
+                        <TextView
+                            android:id="@+id/tvUpdateLuggage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/dp_5"
+                            android:layout_toLeftOf="@+id/tvChildTicketRule"
+                            android:background="@drawable/bg_radius_blue_d4_hollow"
+                            android:padding="@dimen/dp_4"
+                            android:text="@string/update_luggage"
+                            android:textColor="@color/color007EFF"
+                            android:textSize="@dimen/sp_12"
+                            android:visibility="invisible" />
+
+
+                    </RelativeLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_44"
+                        android:layout_marginTop="@dimen/dp_12"
+                        android:background="@color/colorWhite"
+                        android:paddingLeft="@dimen/dp_12">
+
+                        <TextView
+                            android:id="@+id/tvAirPassenger"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="@string/air_passenger"
+                            android:textColor="@color/color292929"
+                            android:textSize="@dimen/sp_15" />
+
+                        <ImageView
+                            android:id="@+id/ivAdd"
+                            android:layout_width="@dimen/dp_44"
+                            android:layout_height="@dimen/dp_44"
+                            android:layout_gravity="center_vertical|right"
+                            android:padding="@dimen/dp_10"
+                            android:src="@mipmap/btn_add_black" />
+
+                    </FrameLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rvPassengers"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </android.support.v7.widget.RecyclerView>
+                    </RelativeLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_12" />
+
+                    <include
+                        android:id="@+id/iContactName"
+                        layout="@layout/layout_tab_edit" />
+
+                    <View
+                        style="@style/line"
+                        android:layout_marginLeft="@dimen/dp_12"
+                        android:layout_marginRight="@dimen/dp_12" />
+
+                    <include
+                        android:id="@+id/iContactPhone"
+                        layout="@layout/layout_tab_edit" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_12" />
+
+                    <include
+                        android:id="@+id/iInsurance"
+                        layout="@layout/layout_tab_radio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_55"
+                        android:layout_marginTop="@dimen/dp_12"
+                        android:background="@color/colorWhite"
+                        android:paddingLeft="@dimen/sp_12"
+                        android:paddingRight="@dimen/sp_12"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/make_invoice"
+                                android:textColor="@color/color292929"
+                                android:textSize="@dimen/sp_15" />
+
+                            <TextView
+                                android:id="@+id/tvInvoiceExplain"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:text="@string/flight_after_7_day_send_email"
+                                android:textColor="@color/color666666"
+                                android:textSize="@dimen/sp_12" />
+                        </LinearLayout>
+
+
+                        <Switch
+                            android:id="@+id/swExpenseAccount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|right"
+                            android:thumb="@drawable/switch_custom_thumb_selector"
+                            android:track="@drawable/switch_custom_track_selector" />
+
+                    </FrameLayout>
+
+
+                    <include
+                        android:id="@+id/iExpenseAccount"
+                        layout="@layout/layout_expense_account"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+            </ScrollView>
+
+
+            <FrameLayout
+                android:id="@+id/flFooter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+
+                <include
+                    android:id="@+id/iOrderFooter"
+                    layout="@layout/layout_confirm_order_footer" />
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/flPriceDetailBG"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dp_55"
+                android:background="@color/colorBlackT150"
+                android:clickable="true"
+                android:visibility="invisible">
+
+                <LinearLayout
+                    android:id="@+id/flPriceDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@color/colorWhite"
+                    android:clickable="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/dp_12"
+                        android:paddingTop="@dimen/dp_12"
+                        android:paddingBottom="@dimen/dp_5"
+                        android:text="@string/order_price_detail"
+                        android:textColor="@color/color292929"
+                        android:textSize="@dimen/sp_15" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rvPriceDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</layout>

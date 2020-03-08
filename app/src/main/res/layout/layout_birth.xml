@@ -1,0 +1,39 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/llContainer"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/dp_12"
+        android:paddingRight="@dimen/dp_12"
+        android:paddingLeft="@dimen/dp_12"
+        android:background="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:text="@string/date_of_birth"
+            android:textColor="@color/color292929"
+            android:layout_marginBottom="@dimen/dp_12"
+            android:textSize="@dimen/sp_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <View style="@style/line"/>
+
+        <com.centaurstech.sdk.view.GregorianLunarCalendarView
+            xmlns:calendarView="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            calendarView:glcv_GregorianThemeColor="@color/colorFFD400"
+            calendarView:glcv_NormalTextColor="@color/colorGray"
+            calendarView:glcv_ScrollAnimation="true"/>
+
+    </LinearLayout>
+
+
+
+
+</layout>

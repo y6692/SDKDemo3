@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorF7F7F7"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/iHeadLayout"
+            layout="@layout/layout_header" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_15">
+
+            <ImageView
+                android:id="@+id/svHeaderImage"
+                android:layout_width="@dimen/dp_45"
+                android:layout_height="@dimen/dp_45" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvNickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:layout_toLeftOf="@+id/ivTooRight2"
+                    android:text="123123"
+                    android:textColor="@color/color2A2A2A"
+                    android:textSize="@dimen/sp_15" />
+
+                <TextView
+                    android:id="@+id/tvPhoneNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:layout_toLeftOf="@+id/ivTooRight2"
+                    android:text="123123"
+                    android:textColor="@color/color999999"
+                    android:textSize="@dimen/sp_15" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <View style="@style/line" />
+
+        <RelativeLayout
+            android:id="@+id/rlDriveInfo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:background="@color/colorWhite"
+            android:paddingLeft="@dimen/dp_15"
+            android:paddingRight="@dimen/dp_15">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="设备信息"
+                android:textColor="@color/color2A2A2A"
+                android:textSize="@dimen/sp_15" />
+
+            <TextView
+                android:id="@+id/tvDrive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_15"
+                android:layout_toLeftOf="@+id/ivTooRight2"
+                android:textColor="@color/color999999"
+                android:textSize="@dimen/sp_13" />
+
+            <ImageView
+                android:id="@+id/ivTooRight2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/anv_icon_more" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_15"
+            android:background="@drawable/bg_radius_d10_white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/llMeOrder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:text="@string/my_order"
+                    android:textColor="@color/color292929"
+                    android:textSize="@dimen/sp_15" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:layout_toLeftOf="@+id/ivRight"
+                    android:text="@string/all_order"
+                    android:textColor="@color/colorB3B3B3"
+                    android:textSize="@dimen/sp_13" />
+
+                <ImageView
+                    android:id="@+id/ivRight"
+                    android:layout_width="@dimen/dp_7"
+                    android:layout_height="@dimen/dp_22"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:src="@mipmap/anv_icon_more" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_1"
+                android:layout_marginBottom="@dimen/dp_12"
+                android:background="@color/colorWhite"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_15">
+
+                <FrameLayout
+                    android:id="@+id/flUnpaid"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:clickable="true">
+
+                    <include
+                        android:id="@+id/iUnpaid"
+                        layout="@layout/layout_personage_tab"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/flProcessing"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:clickable="true">
+
+                    <include
+                        android:id="@+id/iProcessing"
+                        layout="@layout/layout_personage_tab"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/flNoTravel"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:clickable="true">
+
+                    <include
+                        android:id="@+id/iNoTravel"
+                        layout="@layout/layout_personage_tab"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/flTravel"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:clickable="true">
+
+                    <include
+                        android:id="@+id/iTravel"
+                        layout="@layout/layout_personage_tab"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/flCancelAndRefund"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:clickable="true">
+
+                    <include
+                        android:id="@+id/iCancelAndRefund"
+                        layout="@layout/layout_personage_tab"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </FrameLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvLogout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:layout_marginTop="@dimen/dp_50"
+            android:background="@color/colorWhite"
+            android:gravity="center"
+            android:text="退出登录"
+            android:textColor="@color/colorE7143A"
+            android:textSize="@dimen/sp_15" />
+    </LinearLayout>
+
+</layout>

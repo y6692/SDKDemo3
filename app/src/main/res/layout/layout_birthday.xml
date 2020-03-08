@@ -1,0 +1,55 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/llContainer"
+        android:orientation="vertical"
+        android:background="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_44">
+
+            <TextView
+                android:id="@+id/tvCancel"
+                android:text="@string/cancel"
+                android:textSize="@dimen/sp_15"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp_12"
+                android:paddingRight="@dimen/dp_12"
+                android:textColor="@color/colorFFD400"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/tvConfirm"
+                android:text="@string/confirm"
+                android:textSize="@dimen/sp_15"
+                android:layout_gravity="right"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp_12"
+                android:paddingRight="@dimen/dp_12"
+                android:textColor="@color/colorFFD400"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+        </FrameLayout>
+
+        <View style="@style/line"/>
+
+        <com.centaurstech.sdk.view.GregorianLunarCalendarView
+            xmlns:calendarView="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            calendarView:glcv_GregorianThemeColor="@color/colorFFD400"
+            calendarView:glcv_NormalTextColor="@color/colorGray"
+            calendarView:glcv_ScrollAnimation="true"/>
+
+    </LinearLayout>
+
+
+
+
+</layout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorF7F7F7"
+        android:orientation="vertical">
+
+
+        <include
+            android:id="@+id/iHeadLayout"
+            layout="@layout/layout_header" />
+
+        <include
+            android:id="@+id/iName"
+            layout="@layout/item_text_edit" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_marginRight="@dimen/dp_12"
+            android:layout_marginBottom="@dimen/dp_12"
+            android:text="@string/name_and_certificate_must_same"
+            android:textColor="@color/colorB3B3B3"
+            android:textSize="@dimen/sp_12" />
+
+
+        <LinearLayout
+            android:id="@+id/llSpellSurname"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_44"
+            android:background="@color/colorWhite"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View
+                style="@style/line"
+                android:layout_gravity="top"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:layout_marginRight="@dimen/dp_12" />
+
+            <include
+                android:id="@+id/iSpellSurname"
+                layout="@layout/item_text_edit" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llSpellName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_44"
+            android:layout_marginBottom="@dimen/dp_12"
+            android:background="@color/colorWhite"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View
+                style="@style/line"
+                android:layout_gravity="top"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:layout_marginRight="@dimen/dp_12" />
+
+            <include
+                android:id="@+id/iSpellName"
+                layout="@layout/item_text_edit" />
+
+        </LinearLayout>
+
+
+        <include
+            android:id="@+id/iGender"
+            layout="@layout/layout_tab_arrow" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_12" />
+
+        <include
+            android:id="@+id/iCertificateType"
+            layout="@layout/layout_tab_arrow" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite">
+
+            <View
+                style="@style/line"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:layout_marginRight="@dimen/dp_12" />
+        </FrameLayout>
+
+        <include
+            android:id="@+id/iCertificateNumber"
+            layout="@layout/item_text_edit" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite">
+
+            <View
+                style="@style/line"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:layout_marginRight="@dimen/dp_12" />
+        </FrameLayout>
+
+        <include
+            android:id="@+id/iBirthday"
+            layout="@layout/layout_tab_arrow" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_12" />
+
+        <include
+            android:id="@+id/iPhoneNumber"
+            layout="@layout/layout_tab_edit" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_12" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tvSaveTraveler"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_44"
+            android:layout_marginLeft="@dimen/dp_53"
+            android:layout_marginRight="@dimen/dp_53"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:background="@drawable/bg_radius_yellow_d5"
+            android:gravity="center"
+            android:text="@string/confirm"
+            android:textColor="@color/color2A2A2A"
+            android:textSize="@dimen/sp_15" />
+
+    </LinearLayout>
+
+</layout>

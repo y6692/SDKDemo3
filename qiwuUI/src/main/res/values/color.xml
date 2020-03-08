@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorTheme">#2A2A2A</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorFF9100">#FF9100</color>
+    <color name="colorFFD400">#FFD400</color>
+    <color name="colorB3B3B3">#B3B3B3</color>
+    <color name="colorLine">#E5E5E5</color>
+    <color name="colorTransparent">#00000000</color>
+    <color name="dialogBackground">#0b424242</color>
+    <color name="colorText">#292929</color>
+    <color name="colorFFFFD400">#FFFFD400</color>
+    <color name="colorFF000000">#FF000000</color>
+    <color name="colorFF707070">#FF707070</color>
+    <color name="progress_gray">#a4a4a4</color>
+    <color name="color007EFF">#007EFF</color>
+    <color name="color292929">#292929</color>
+    <color name="colorEBEBEB">#EBEBEB</color>
+    <color name="color666666">#666666</color>
+</resources>

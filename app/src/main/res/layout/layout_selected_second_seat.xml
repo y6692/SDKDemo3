@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout
+        android:id="@+id/llFiveSeatCol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_12">
+
+        <RelativeLayout
+            android:id="@+id/rlOneCol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvLeftWindow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/windows"
+                android:textColor="@color/colorA9A9A9"
+                android:textSize="@dimen/sp_15" />
+
+            <ImageView
+                android:id="@+id/cbImageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_toRightOf="@+id/tvLeftWindow"
+                android:background="@drawable/seat_selected_a" />
+
+            <ImageView
+                android:id="@+id/cbImageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_toRightOf="@+id/cbImageView1"
+                android:background="@drawable/seat_selected_b" />
+
+            <ImageView
+                android:id="@+id/cbImageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_toRightOf="@+id/cbImageView2"
+                android:background="@drawable/seat_selected_c" />
+
+            <TextView
+                android:id="@+id/tvOneAisle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/flTwoLayout"
+                android:layout_toRightOf="@+id/cbImageView3"
+                android:gravity="center"
+                android:text="@string/aisle"
+                android:textColor="@color/colorA9A9A9"
+                android:textSize="@dimen/sp_15" />
+
+            <FrameLayout
+                android:id="@+id/flTwoLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/cbImageView5">
+
+                <ImageView
+                    android:id="@+id/cbImageView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:background="@drawable/seat_selected_d"
+                    android:button="@null" />
+
+                <ImageView
+                    android:id="@+id/cbImageView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dp_30"
+                    android:background="@drawable/seat_selected_f"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/cbImageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/tvRightWindow"
+                android:background="@drawable/seat_selected_f" />
+
+            <TextView
+                android:id="@+id/tvRightWindow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:text="@string/windows"
+                android:textColor="@color/colorA9A9A9"
+                android:textSize="@dimen/sp_15" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlTwoCol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20">
+
+            <TextView
+                android:id="@+id/tvTwoLeftWindow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/windows"
+                android:textColor="@color/colorA9A9A9"
+                android:textSize="@dimen/sp_15" />
+
+            <ImageView
+                android:id="@+id/cbImageView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_toRightOf="@+id/tvTwoLeftWindow"
+                android:background="@drawable/seat_selected_a" />
+
+            <ImageView
+                android:id="@+id/cbImageView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_toRightOf="@+id/cbImageView7"
+                android:background="@drawable/seat_selected_b" />
+
+            <ImageView
+                android:id="@+id/cbImageView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_toRightOf="@+id/cbImageView8"
+                android:background="@drawable/seat_selected_c"
+                android:button="@null" />
+
+            <TextView
+                android:id="@+id/tvTwoAisle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/flLayout"
+                android:layout_toRightOf="@+id/cbImageView9"
+                android:gravity="center"
+                android:text="@string/aisle"
+                android:textColor="@color/colorA9A9A9"
+                android:textSize="@dimen/sp_15" />
+
+            <FrameLayout
+                android:id="@+id/flLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/cbImageView11">
+
+                <ImageView
+                    android:id="@+id/cbImageView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:background="@drawable/seat_selected_d" />
+
+                <ImageView
+                    android:id="@+id/cbImageView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dp_30"
+                    android:background="@drawable/seat_selected_f"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/cbImageView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/tvTwoRightWindow"
+                android:background="@drawable/seat_selected_f" />
+
+            <TextView
+                android:id="@+id/tvTwoRightWindow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:text="@string/windows"
+                android:textColor="@color/colorA9A9A9"
+                android:textSize="@dimen/sp_15" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</layout>
